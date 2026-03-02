@@ -939,27 +939,83 @@
       </section>
 
      <!-- SECCION CONTACTO --> 
-    <section class="sec-contac" id="sec-contac">
-      <center><h1>CONTACTO</h1></center>
+    <!-- SECCION CONTACTO --> 
+<section class="sec-contac" id="sec-contac">
+  <center><h1>CONTACTO</h1></center>
 
-      <div class="info-contacto">
-        <div class="detalle-info">
-          <label>Teléfono: (02) 34 06 006</label>
-          <label>Celular: 099 243 2764</label>
-          <label>Correo: info@imdeteck.com / imdeteck@gmail.com</label>
-        </div>
+  <div class="info-contacto">
+    <div class="detalle-info">
+      <label>Teléfono: (02) 34 06 006</label>
+      <label>Celular: 099 243 2764</label>
+      <label>Correo: info@imdeteck.com / imdeteck@gmail.com</label>
+    </div>
 
+    <!-- FORMULARIO -->
+<div class="formulario-container">
+  <h3>Envíanos un mensaje</h3>
+  <form class="formulario-contacto" action="https://formsubmit.co/info@imdeteck.com" method="POST">
+    <!-- Campos del formulario -->
+    <div class="campo-formulario">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+    </div>
+    
+    <div class="campo-formulario">
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+    </div>
+    
+    <div class="campo-formulario">
+      <input type="text" name="telefono" placeholder="Teléfono (opcional)">
+    </div>
+    
+    <div class="campo-formulario">
+      <select name="asunto" required>
+        <option value="" disabled selected>Selecciona un asunto</option>
+        <option value="consulta">Consulta general</option>
+        <option value="cotizacion">Solicitud de cotización</option>
+        <option value="producto">Información de producto</option>
+        <option value="soporte">Soporte técnico</option>
+      </select>
+    </div>
+    
+    <div class="campo-formulario">
+      <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="5" required></textarea>
+    </div>
+    
+    <!-- Configuraciones de FormSubmit - VERSIÓN CORREGIDA -->
+    <input type="hidden" name="_subject" value="Nuevo mensaje desde IMDETECK web">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="http://127.0.0.1:5500/gracias.html">
+    <input type="hidden" name="_cc" value="paginasweb.uio@gmail.com">
+    
+    <!-- Botón de envío -->
+    <button type="submit" class="btn-enviar">
+      <i class="fa-regular fa-paper-plane"></i> Enviar mensaje
+    </button>
+  </form>
+</div>
 
-        <div class="social-icons">
-          <a href="https://wa.me/593992432764" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://www.facebook.com/imdeteck" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://x.com/imdeteck?t=gp3uVtFnSjCgVpJEQIET2Q&s=09" target="_blank"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://www.instagram.com/imdeteck/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://t.me/imdetecklab" target="_blank"><i class="fab fa-telegram"></i></a>
-        </div>
+    <div class="social-icons">
+      <a href="https://wa.me/593992432764" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/imdeteck" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://x.com/imdeteck?t=gp3uVtFnSjCgVpJEQIET2Q&s=09" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/imdeteck/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/imdetecklab" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
 
+    <div class="desarrollado">
+      <div class="contenedor-desarrollo">
+        <p>DESARROLLADO POR: 
+          <br>EMPRESA: KRYSWEB
+          <br>CORREO: paginasweb.uio@gmail.com
+          <br>CONTACTO: 098 299 6860
+          <br>WEB: <a href="https://christian-chavez-b.github.io/krysweb/">VISITA WEB</a>
+        </p>
+        <img class="imagen-logod" src="image/logo2.png" alt="logo">
       </div>
-      </section>
+    </div>
+  </div>
+</section>
 
   <script src="script.js"></script>
 </body>

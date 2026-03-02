@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
   background: #f9f9f9;
+
+  position: relative;
+  min-height: 100vh; /* asegura altura completa */
 }
 
 .productos {
@@ -467,3 +470,175 @@ main {
   }
 }
 
+/* === SECCION DESARROLLADOR === */
+.desarrollado {
+  position: absolute; /* lo posiciona respecto al body */
+  bottom: 20px; /* margen inferior */
+  left: 20px;   /* margen izquierdo */
+  display: flex;
+  flex-direction: column; /* texto arriba, logo debajo */
+  align-items: flex-start;
+  opacity: 0.85; /* ligera transparencia */
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  z-index: 1000;
+}
+
+.contenedor-desarrollo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  background-color: rgba(255, 255, 255, 0.2); /* fondo sutil */
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px); /* efecto vidrio */
+}
+
+.desarrollado p {
+  margin: 0;
+  font-size: 11px;
+  color: #222;
+}
+
+.imagen-logod {
+  width: 80px;
+  height: auto;
+  opacity: 0.85;
+}
+
+/* ===== VERSION MOVIL ===== */
+@media (max-width: 768px) {
+  .desarrollado {
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .desarrollado p {
+    font-size: 9px;
+  }
+
+  .imagen-logod {
+    width: 20px;
+  }
+}
+
+/* === ESTILOS PARA EL FORMULARIO === */
+.formulario-container {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(119, 218, 225, 0.3);
+}
+
+.formulario-container h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.campo-formulario {
+  width: 100%;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+  outline: none;
+  border-color: rgba(119, 218, 225, 0.8);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(119, 218, 225, 0.2);
+}
+
+.campo-formulario input:hover,
+.campo-formulario select:hover,
+.campo-formulario textarea:hover {
+  border-color: #999;
+}
+
+.btn-enviar {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(18, 140, 126, 0.3);
+  background: linear-gradient(135deg, #128C7E, #0e6b5f);
+}
+
+.btn-enviar i {
+  font-size: 18px;
+}
+
+/* Estilo para placeholder */
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+/* Responsive del formulario */
+@media (max-width: 768px) {
+  .formulario-container {
+    margin: 15px;
+    padding: 20px;
+    width: calc(100% - 30px);
+  }
+  
+  .btn-enviar {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Ajuste del contenedor de contacto para mejor disposición */
+.info-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.sec-contac {
+  height: auto;
+  min-height: 400px;
+  padding-bottom: 30px;
+}
